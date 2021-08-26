@@ -48,7 +48,7 @@ function fw = safe_tau_lowpass(dgdt, tau, dt)
 % easily implemented on their hardware stimulation monitors, so I'm probably
 % pretty close. - TW
 
-alpha = dt / (tau + dt);
+alpha = dt / (tau + 0.5*dt);
 
 fw = zeros(size(dgdt));
 
